@@ -58,17 +58,17 @@ const previewAnimation = new TimelineMax({ paused: true })
   .to('.next-item__content', 0.6, { ease: Sine.easeOut, xPercent: 100 })
   .to(
     '.next-item__content',
-    0.5,
+    0.8,
     { ease: Sine.easeOut, xPercent: 0 },
     'sliderClosed+=0.15'
   )
-  .to('.preview__image--first', 0.8, { ease: Power2.easeOut, opacity: 0 }, 'sliderClosed')
+  .to('.preview__image--first', 1, { ease: Power2.easeOut, xPercent: 10 }, 0)
   .fromTo(
     '.preview__image--next',
     0.8,
-    { ease: Power2.easeOut, opacity: 0, scale: 1.2 },
-    { ease: Power2.easeOut, opacity: 1, scale: 1 },
-    'sliderClosed'
+    { ease: Sine.easeOut, xPercent: 100 },
+    { ease: Sine.easeOut, xPercent: 0 },
+    'sliderClosed+=0.05'
   )
   .eventCallback('onComplete', () => {
     previewAnimation.progress(0).pause()
@@ -81,7 +81,11 @@ const previewAnimation = new TimelineMax({ paused: true })
 const nextItem = () => {
   console.log('next item clicked')
 
-  if (!titleAnimation.isActive()) {
+  if (
+    !titleAnimation.isActive() &&
+    !imageAnimation.isActive() &&
+    !previewAnimation.isActive()
+  ) {
     activeIndex = getNextIndex()
     titleAnimation.play()
     imageAnimation.play()
