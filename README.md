@@ -1,6 +1,6 @@
 # FEST challenge 04
 
-> [Demo](https://04-gsap-slider.christofferberg.now.sh/)
+> [Demo](https://gsap-slider.christofferberg.now.sh/)
 
 ## Build Setup
 
