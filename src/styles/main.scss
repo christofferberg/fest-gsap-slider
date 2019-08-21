@@ -49,15 +49,23 @@ body {
     height: 156px;
     transform: translateY(-50%);
     color: #fff;
-    font-size: 60px;
     font-weight: 700;
-    line-height: 1.3;
     overflow: hidden;
   }
 
   &__title-text {
     white-space: nowrap;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 35px;
+      margin: 0;
+    }
 
     &--next {
       opacity: 0;
