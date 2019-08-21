@@ -13,17 +13,41 @@
   <body>
     <main class="main">
       <div class="item">
+        <!-- Images -->
         <img class="item__image item__image--first" />
         <img class="item__image item__image--next" />
 
+        <!-- Images title -->
         <div class="item__title">
-          <div class="item__title-text item__title-text--first"></div>
-          <div class="item__title-text item__title-text--next"></div>
+          <div class="item__title-wrapper">
+            <div class="item__title-text item__title-text--first"></div>
+            <div class="item__title-text item__title-text--next"></div>
+          </div>
         </div>
 
+        <!-- Button - next item -->
         <button class="next-item">
           <div class="next-item__content">
-            Next item
+            <div class="next-item__heading">Up next</div>
+
+            <div class="next-item__title">
+              <div class="next-item__title-text next-item__title-text--first"></div>
+              <div class="next-item__title-text next-item__title-text--next"></div>
+            </div>
+
+            <div class="next-item__arrow">
+              <svg
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </div>
           </div>
 
           <div class="preview">
