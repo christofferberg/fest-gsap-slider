@@ -64,11 +64,11 @@ const imageAnimation = new TimelineMax({ paused: true })
 
 const previewAnimation = new TimelineMax({ paused: true })
   .to(".next-item__content", 0.5, { ease: Sine.easeOut, x: 150 })
-  .to(".next-item__content", 0.5, { ease: Sine.easeOut, x: 0 }, "sliderClosed+=0.15")
+  .to(".next-item__content", 0.45, { ease: Sine.easeOut, x: 0 }, "sliderClosed+=0.15")
   .to(".preview__image--first", 0.8, { ease: Power2.easeOut, xPercent: 25 }, 0)
   .fromTo(
     ".preview__image--next",
-    0.6,
+    0.55,
     { ease: Sine.easeOut, xPercent: 100 },
     { ease: Sine.easeOut, xPercent: 0 },
     "sliderClosed+=0.05"
