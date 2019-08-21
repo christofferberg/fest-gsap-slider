@@ -79,12 +79,12 @@ const previewAnimation = new TimelineMax({ paused: true })
     previewAnimation.progress(0).pause();
 
     const nextTitles = document.querySelectorAll(".next-item__title-text");
-    nextTitles[0].innerHTML = data[activeIndex].nextTitle;
-    nextTitles[1].innerHTML = data[getNextIndex()].nextTitle;
+    nextTitles[0].innerHTML = data[getNextIndex()].nextTitle;
+    nextTitles[1].innerHTML = data[getNextIndex(1)].nextTitle;
 
-    const images = document.querySelectorAll(".preview__image");
-    images[0].src = data[getNextIndex()].thumb;
-    images[1].src = data[getNextIndex(1)].thumb;
+    const previewImages = document.querySelectorAll(".preview__image");
+    previewImages[0].src = data[getNextIndex()].thumb;
+    previewImages[1].src = data[getNextIndex(1)].thumb;
   });
 
 const nextItem = () => {
