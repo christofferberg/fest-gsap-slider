@@ -99,7 +99,7 @@ const nextItem = () => {
 };
 
 // Helpers
-const getNextIndex = (skipSteps = 0) => {
+const getNextIndex = (skip = 0) => {
   const incrementIndex = () => {
     if (newIndex >= data.length - 1) {
       newIndex = 0;
@@ -111,7 +111,7 @@ const getNextIndex = (skipSteps = 0) => {
   let newIndex = activeIndex;
   incrementIndex();
 
-  for (let i = 0; i < skipSteps; i++) {
+  for (let i = 0; i < skip; i++) {
     incrementIndex();
   }
 
